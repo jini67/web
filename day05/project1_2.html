@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      li {
+        width: 70px;
+        height: 20px;
+        list-style: none;
+        float: left;
+        padding: 15px;
+      }
+      li:last-child {
+        border-radius: 0 50px 50px 0;
+      }
+      li:first-child {
+        border-radius: 50px 0 0 50px;
+      }
+      li:nth-child(2n) {
+        background: white;
+      }
+      li:nth-child(2n + 1) {
+        background: grey;
+      }
+      #center {
+        padding: 30px;
+        width: 800px;
+        height: 700px;
+        background: beige;
+      }
+      body {
+        background: pink;
+      }
+      div {
+        font-size: 15px;
+        font-weight: bold;
+        color: blue;
+      }
+      #top {
+        width: 800px;
+        height: 80px;
+        background: skyblue;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="total">
+      <div id="top">
+        <ul>
+          <li>
+            <!--  a 컨트롤 + 스페이스바 -->
+            <a href="project1_1.html">영화예매</a>
+          </li>
+          <li>
+            <!--  a 컨트롤 + 스페이스바 -->
+            <a href="project1_2.html">결제하기</a>
+          </li>
+        </ul>
+      </div>
+      <div id="center">
+        <h2>결제하기</h2>
+        <hr color="black">
+        <h3>영화검색</h3>
+        <form action="보내는서버주소">
+            영화명 <input type="text">
+            <button>검색</button> <br>
+            <hr color="black">
+            <img src="슬램덩크.jpg" alt="">
+            <img src="아바타2.jpg" alt="">
+        </form>
+        <hr color="red">
+        <h3>결제하기</h3>
+        <form action="보내는서버주소">
+            <table>
+                <tr>
+                    <td>극장검색</td>
+                    <td><input type="text" placeholder="예)서울점 ">
+                      <button>검색</button></td>
+                </tr>
+                <tr>
+                    <td>할인수단</td>
+                    <td><input type="radio" name="gender">모바일쿠폰
+                        <input type="radio" name="gender">상품권</td>
+                </tr>
+                <tr>
+                    <td>전화번호</td>
+                    <td>
+                        <select>
+                            <option>SKT</option>
+                            <option>KT</option>
+                            <option>LGT</option>
+                            <option>알뜰폰</option>
+                        </select>
+                        <input type="number" placeholder="-없이 숫자만">
+                    </td>
+                </tr>
+                <tr>
+                    <td>예매일</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>요청사항</td>
+                    <td>
+                        <textarea cols="30" rows="5" placeholder="100자 이내로 적어주세요."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button>결제</button></td>
+                </tr>
+            </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
