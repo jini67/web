@@ -113,7 +113,35 @@ public class MemberUI2 {
 				}
 			} // action
 		}); // b3
+		
+		String test = "아무개";
+		
+		// 검색기능
+		b4.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("회원검색처리");
+				String id = t1.getText();
+
+				MemberDAO3 dao = new MemberDAO3();
+				MemberVO bag = dao.one(id);//MemberVO
+				if(bag != null) {
+					t2.setText(bag.getPw());
+					t3.setText(bag.getName());
+					t4.setText(bag.getTel());
+					t2.setBackground(Color.pink);
+					t3.setBackground(Color.pink);
+					t4.setBackground(Color.pink);
+				}else {
+					t2.setText("");
+					t3.setText("");
+					t4.setText("");
+					JOptionPane.showMessageDialog(f, "검색결과 없음");
+				}
+			}// action
+		}); // b4
+		
 		// f에 위에 있는 요소들을 add로 붙여주어야 하는데,
 		// 붙이는 순서대로 물흐르듯이 붙여주고 싶음.
 		// 물흐르듯 붙여주는 부품이 필요
