@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
+//	alert('회원수정 페이지입니다. 반갑습니다!')
 </script>
 <style type="text/css">
 body { /*컨트롤 + / >> 자동주석, 태그선택*/
+
 	background: #ffdcd6
 }
 
@@ -30,15 +32,23 @@ button {
 </style>
 </head>
 <body>
-<form action="delete.jsp">
+<form action="update.jsp">
+<h3>회원수정 페이지</h3>
+<hr color="red">
 <table border="1">
 			<tr>
-				<td class="t1">탈퇴할  id :</td>
+				<td class="t1">수정할 id :</td>
 				<td><input name="id"></td>
 			</tr>
 			<tr>
+				<td class="t1">수정할 tel
+				 :</td>
+				<td><input name="tel"></td>
+			</tr>
+			
+			<tr>
 				<td colspan="2" class="t1">
-					<button id="b2">탈퇴할 id 데이터 전송</button>
+					<button id="b2">수정할 데이터 전송</button>
 				</td>
 			</tr>
 		</table>
