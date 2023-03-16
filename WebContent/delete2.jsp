@@ -1,3 +1,5 @@
+<%@page import="multi.BbsVO"%>
+<%@page import="multi.BbsDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%

@@ -1,5 +1,5 @@
-<%@page import="multi.copy.MemberDAO3"%>
-<%@page import="multi.copy.MemberVO"%>
+<%@page import="multi.MemberDAO3"%>
+<%@page import="multi.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!-- 브라우저가 보낸 데이터를 받아야 함. ==> 자바로 짜야함 -->
