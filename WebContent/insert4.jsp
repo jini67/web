@@ -44,9 +44,9 @@
 영화등록 요청되었음.
 <hr color="red">
 id : <%= bag.getId() %> <br>
-name : <%= bag.getTitle() %> <br>
-content : <%= bag.getContent() %> <br>
-price : <%= bag.getLocation() %> <br>
-company : <%= bag.getDirector() %> <br>
+영화제목 : <%= bag.getTitle() %> <br>
+영화내용 : <%= bag.getContent() %> <br>
+촬영지 : <%= bag.getLocation() %> <br>
+감독 : <%= bag.getDirector() %> <br>
 </body>
 </html>
