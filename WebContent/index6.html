@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function check() {
+	idValue = document.getElementById("user").value
+	divTag = document.getElementById("result")
+	
+	if (idValue.lenght >= 5) {
+		//divTag.innerHTML = "<img src=img/ok.png width=300 height=300>"
+		location.href = "http://www.naver.com"
+	} else {
+		//divTag.innerHTML = "<img src=img/no.png width=300 height=300>"
+		location.href = "http://www.daum.net"
+	}
+}
+function same() {
+		pw1Value = document.getElementById("pw1").value	
+		pw2Value = document.getElementById("pw2").value	
+		divTag = document.getElementById("result")
+
+	if (pw1Value == pw2Value) {
+		divTag.innerHTML = "<img src=img/ok.png width=300 height=300>"
+	} else {
+		divTag.innerHTML = "<img src=img/no.png width=300 height=300>"
+	}
+}
+</script>
+</head>
+<body>
+아이디 : <input id="user" value="root"><br>
+<button onclick="check()">글자수체크</button>
+<hr>
+패스워드 :
+	<input id='pw1' value='1234'>
+	<br> 패스워드2 :
+	<input id='pw2' value='1234'>
+	<br>
+	<button onclick="same()">패스워드 동일체크</button>
+<hr>
+<div id="result"
+		style="color: red; background: yellow; width: 500px; height: 50px; font-size: 30px">결과넣는
+		곳.</div>
+</body>
+</html>
