@@ -39,7 +39,7 @@
 <h3>게시물검색 화면입니다. </h3>
 <hr color="blue">
 <form action="one2.multi" method="get">
-	no : <input name="no" value="11"><br>
+	no : <input name="no" value="30"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="violet">

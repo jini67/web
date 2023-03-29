@@ -5,17 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
+<style>
 body {
+background: pink;
 }
 </style>
 </head>
 <body>
-게시글검색 처리 요청이 완료되었습니다.
-<hr>
-${bag.no}<br>
-${bag.title}<br>
-${bag.content}<br>
-${bag.writer}
+북마크 등록이 완료되었습니다.
 </body>
 </html>

@@ -2,6 +2,7 @@ package com.multi.mvc01;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -10,7 +11,7 @@ public class BbsController {
 	@Autowired
 	BbsDAO dao;
 	
-	@RequestMapping("insert2.multi")
+	@RequestMapping("insert2")
 	public void insert(BbsVO bag) {
 		System.out.println("insert요청됨.");
 		System.out.println(bag);
@@ -32,8 +33,11 @@ public class BbsController {
 	}
 	
 	@RequestMapping("one2.multi")
-	public void one(int no) {
-		System.out.println("one요청됨.");
-		System.out.println(no);
+	public void one(int no, Model model) {
+		System.out.println("one요청됨 no val: " + no);
+		
+		BbsVO bag = dao.one(no);
+		System.out.println("bag"+ bag);
+		model.addAttribute("bag", bag);
 	}
 }

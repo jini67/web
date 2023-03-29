@@ -7,6 +7,26 @@
 <title>회원가입 화면입니다.</title>
 </head>
 <body>
+<h3>검색화면입니다.</h3>
+<hr color="black">
+
+<!-- one?id=1 -->
+<hr color="violet">
+<form action="one" method="get">
+아이디 : <input name="id" value="apple"><br>
+<button type="submit">서버로 전송</button>
+</form>
+<hr color="yellow">
+
+<h3>로그인 화면입니다.</h3>
+<hr color="violet">
+<form action="login" method="get">
+아이디 : <input name="id" value="apple"><br>
+패스워드 : <input name="pw" value="1234"><br>
+<button type="submit">서버로 전송</button>
+</form>
+<hr color="pink">
+
 <h3>회원가입 화면입니다.</h3>
 <hr color="pink">
 <form action="insert" method="get">

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 // 테이블 하나당 DAO 하나!
 // CUD 완성하기
+
 public class BbsDAO {
 	
 	public ArrayList<BbsVO> list() {
@@ -79,6 +80,7 @@ public class BbsDAO {
 	public BbsVO one(int no) {
 		ResultSet rs = null;
 		BbsVO bag = null;
+		System.out.println("test dao");
 		try {
 			// 1. 오라클 11g와 연결할 부품 설정
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -97,7 +99,7 @@ public class BbsDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setInt(1, no);
 			// con부품으로 sql스트링에 있는 것을 SQL부품으로 만들어주세요.
-			System.out.println("3. SQL문 부품(객체)으로 만들어주기.");
+			System.out.println("3. SQL문 부품(객체)으로 만들어주기. no : "+ no);
 
 			rs = ps.executeQuery(); // select의 결과는 <항목명 + Row> 테이블!
 			System.out.println("4. SQL문 오라클로 보내기 성공.");
@@ -173,7 +175,7 @@ public class BbsDAO {
 			String sql = "update bbs set content = ? where no = ? ";
 			PreparedStatement ps = con.prepareStatement(sql); // PreparedStatement
 			ps.setString(1, bag.getContent());
-			ps.setInt(2, bag.getNo());
+			ps.setInt(2, bag.getId());
 
 			System.out.println("3. SQL문 부품(객체)으로 만들어주기 성공.");
 
@@ -204,7 +206,7 @@ public class BbsDAO {
 
 			String sql = "insert into bbs(no, title, content, writer) values (?,?,?,?)";
 			PreparedStatement ps = con.prepareStatement(sql); // PreparedStatement
-			ps.setInt(1, bag.getNo());
+			ps.setInt(1, bag.getId());
 			ps.setString(2, bag.getTitle());
 			ps.setString(3, bag.getContent());
 			ps.setString(4, bag.getWriter());
