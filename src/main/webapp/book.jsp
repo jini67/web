@@ -17,8 +17,11 @@
 	</form>
 <hr color="orange">
 <form action="one3.multi">
-	name : <input name="name"><br>
+	id : <input name="id"><br>
 	<button type="submit">서버로 전송</button>
 </form>
+
+<a href="list3">모든 게시판 리스트 가지고 오기</a>
+<hr color="red">
 </body>
 </html>

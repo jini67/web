@@ -9,6 +9,7 @@
 <body>
 <h3>검색화면입니다.</h3>
 <hr color="black">
+<a href="list">모든 회원정보 가지고 오기</a>
 
 <!-- one?id=1 -->
 <hr color="violet">
