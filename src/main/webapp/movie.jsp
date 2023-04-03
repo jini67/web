@@ -5,18 +5,70 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-body {
-background: orange;
-}
-</style>
+<script type="text/javascript" src="resources/js/jquery-3.6.4.js"></script>
+<script type="text/javascript">
+	$(function() { //body부분이 dom tree로 메모리에 준비가 되었을 때, 
+		//입력값으로 넣은 함수를 실행해주세요.
+		//alert("월컴...월요일~~~")
+		$('#b2').click(function() {
+			$.ajax({
+				url : "movie",
+				data : {
+					title : $('#title').val(),
+					price : $('#price').val()
+				},
+				success : function(x) {
+					alert('movie요청 성공!' )
+					alert(x)
+					$('#result').append(x + "<br>")
+				},
+				error : function() {
+					alert('movie요청 실패!')
+				} //error
+			}) //ajax
+		})//b2
+		$('#b3').click(function() {
+			$.ajax({
+				url : "fruit",
+				success : function(x) {
+					alert('fruit요청 성공!' )
+					alert(x)
+					$('#result').append(x + "<br>")
+				},
+				error : function() {
+					alert('computer요청 실패!')
+				} //error
+			}) //ajax
+		})//b3
+		$('#b4').click(function() {
+			$.ajax({
+				url : "tour",
+				success : function(x) {
+					alert('tour요청 성공!' )
+					alert(x)
+					$('#result').append(x + "<br>")
+				},
+				error : function() {
+					alert('tour요청 실패!')
+				} //error
+			}) //ajax
+		})//b4
+	}) //$
+</script>
 </head>
 <body>
-<h3>영화 장르 선택화면입니다.  </h3>
-<hr color="red">
-<form action="movie" method="get">
-	영화 장르 : <input name="movie" value="드라마"><br>
-	<button type="submit">서버로 전송</button>
-</form>
+	영화제목 :
+	<input id="title">
+	<br> 영화관람료 :
+	<input id="price"><br>
+	
+	<input id="b2" type="button" value="영화 예매 확인">
+	<br>
+	<input id="b3" type="button" value="과일목록 가지고오기">
+	<br>
+	<input id="b4" type="button" value="여행목록 가지고오기">
+	<br>
+	<hr color="red">
+	<div id="result"></div>
 </body>
 </html>

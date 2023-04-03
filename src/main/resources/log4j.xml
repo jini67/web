@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.multi.mvc05">
+	<logger name="com.test.tmp">
 		<level value="info" />
 	</logger>
 	

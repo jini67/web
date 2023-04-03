@@ -1,6 +1,7 @@
-<%@page import="com.multi.mvc05.BbsVO"%>
+<%@page import="com.test.tmp.BbsVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,25 +17,20 @@ body {
 <a href="bbs.jsp">처음페이지로</a>
 <a href="list2">게시물 전체 목록페이지</a>
 <hr color="red">
-<%
-//세션에서 값을 꺼내는 방법
-	String id = (String)session.getAttribute("id");
-//모델에서 값을 꺼내는 방법
-//model.addAttribute("bag", bag);
-	BbsVO bag = (BbsVO)request.getAttribute("bag");
-	String writer = bag.getWriter();
-	if(id.equals(writer)) { %>
-		<a href="update2">
-			<button style="background: pink;" >수정</button>
-		</a>
-		<a href="delete2.multi?no=${bag.no}">
-			<button style="background: pink;" >삭제</button>
-		</a>
-		<hr color="red">
-	<%} %>
+
 게시물검색 처리 요청이 완료되었습니다.
 <br>
-${bag.no}, ${bag.title},
+${bag.no}, ${bag.title}, 
 ${bag.content}, ${bag.writer}
+<hr color="red">
+댓글달기 : <input id="reply">
+<button id="b1">댓글달기</button><br>
+<hr color="pink">
+<div id="result">
+<!-- for-each를 이용해 댓글 목록을 프린트!! -->
+	<c:forEach items="${list}" var="bag"> 
+	- ${bag.no}, ${bag.bbsno}, ${bag.content}, ${bag.writer} <br>
+	</c:forEach>
+</div>
 </body>
 </html>

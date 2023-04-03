@@ -1,4 +1,4 @@
-<%@page import="com.multi.mvc05.BbsVO"%>
+<%@page import="com.test.tmp.BbsVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
