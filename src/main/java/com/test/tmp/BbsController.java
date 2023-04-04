@@ -66,8 +66,25 @@ public class BbsController {
 		model.addAttribute("bag", bag);
 	}
 	
+	@RequestMapping("one6")
+	public void one5(int no, Model model) {
+		System.out.println("one요청됨.");
+		System.out.println(no);
+		BbsVO bag = dao.one(no);
+		//검색결과가 있는지 프린트!
+		System.out.println(bag);
+		model.addAttribute("bag", bag);
+	}
+	
 	@RequestMapping("list2")
 	public void list(Model model) {
+		ArrayList<BbsVO> list = dao.list();
+		System.out.println(list.size()); //사이즈를 찍어보세요.
+		model.addAttribute("list", list);
+	}
+	
+	@RequestMapping("list5")
+	public void list5(Model model) {
 		ArrayList<BbsVO> list = dao.list();
 		System.out.println(list.size()); //사이즈를 찍어보세요.
 		model.addAttribute("list", list);
