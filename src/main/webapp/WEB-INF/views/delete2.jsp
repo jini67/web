@@ -5,12 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
+<style>
 body {
+	background: yellow;
 }
 </style>
 </head>
 <body>
-게시글삭제 처리 요청이 완료되었습니다.
+게시물삭제 처리 요청이 완료되었습니다.
 </body>
 </html>

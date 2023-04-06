@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>member list</title>
+<title>Insert title here</title>
 <style>
 body {
 	background: yellow;
@@ -23,9 +23,9 @@ body {
 		}
  -->
 <c:forEach items="${list}" var="bag">
-${bag.id}, <!-- 출력용(expression language-EL)  -->
-${bag.pw}, 
-${bag.name}, 
+${bag.id} <br><!-- 출력용(expression language-EL)  -->
+${bag.pw} <br>
+${bag.name} <br>
 ${bag.tel} <br>
 </c:forEach>
 </body>
