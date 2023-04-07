@@ -1,46 +1,39 @@
-package 도서시스템_12조;
+package com.multi.mvc300;
 
-//RAM에 저장공간을 만든다.
 public class BookVO {
-	// MemberVO가방에 넣은 데이터는 Member테이블에 들어갈 예정
-	// 각 컬럼과 일치시켜줌.
-	private String TITLE;
-	private String CONTENT;
-	private String PRICE;
-	private String WRITER;
+	private int id;
+	private String name;
+	private String url;
+	private String img;
 	
-	public String getTITLE() {
-		return TITLE;
+	public int getId() {
+		return id;
 	}
-	public void setTITLE(String title) {
-		TITLE = title;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getCONTENT() {
-		return CONTENT;
+	public String getName() {
+		return name;
 	}
-	public void setCONTENT(String content) {
-		CONTENT = content;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getPRICE() {
-		return PRICE;
+	public String getUrl() {
+		return url;
 	}
-	public void setPRICE(String price) {
-		PRICE = price;
+	public void setUrl(String url) {
+		this.url = url;
 	}
-	public String getWRITER() {
-		return WRITER;
+	public String getImg() {
+		return img;
 	}
-	public void setWRITER(String writer) {
-		WRITER = writer;
+	public void setImg(String img) {
+		this.img = img;
 	}
 	
 	@Override
 	public String toString() {
-		return "BookVO [TITLE=" + TITLE + ", CONTENT=" + CONTENT + ", PRICE=" + PRICE + ", WRITER=" + WRITER + "]";
+		return "BookDTO [id=" + id + ", name=" + name + ", url=" + url + ", img=" + img + "]";
 	}
-	
-	
-	
-	
 	
 }

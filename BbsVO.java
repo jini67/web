@@ -1,43 +1,58 @@
-package 화면DB연결;
+package com.multi.mvc300;
 
 public class BbsVO {
 	private int no;
-	private String TITLE;
-	private String CONTENT;
-	private String WRITER;
+	private String title;
+	private String content;
+	private String writer;
 	
+	
+	//Getters/Setters만들어주세요.
+	
+	
+	//toString도 만들어주세요.
+	@Override
+	public String toString() {
+		return "BbsVO [no=" + no + ", title=" + title + ", content=" + content + ", writer=" + writer + "]";
+	}
+
+
 	public int getNo() {
 		return no;
 	}
+
+
 	public void setNo(int no) {
 		this.no = no;
 	}
-	public String getTITLE() {
-		return TITLE;
+
+
+	public String getTitle() {
+		return title;
 	}
-	public void setTITLE(String title) {
-		TITLE = title;
+
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public String getCONTENT() {
-		return CONTENT;
+
+
+	public String getContent() {
+		return content;
 	}
-	public void setCONTENT(String content) {
-		CONTENT = content;
+
+
+	public void setContent(String content) {
+		this.content = content;
 	}
-	public String getWRITER() {
-		return WRITER;
+
+
+	public String getWriter() {
+		return writer;
 	}
-	public void setWRITER(String writer) {
-		WRITER = writer;
+
+
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
-	
-	@Override
-	public String toString() {
-		return "BbsVO [no=" + no + ", TITLE=" + TITLE + ", CONTENT=" + CONTENT + ", WRITER=" + WRITER + "]";
-	}
-	
-	
-	
-	
-	
 }

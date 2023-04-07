@@ -1,4 +1,4 @@
-package 화면DB연결;
+package com.multi.mvc300;
 
 //RAM에 저장공간을 만든다.
 public class MemberVO {
