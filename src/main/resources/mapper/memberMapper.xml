@@ -3,19 +3,21 @@
 <mapper namespace="member">
 	
 	
-	<insert id="create" parameterType="com.multi.mvc300.MemberVO">
+	<insert id="create" parameterType="memberVO">
 		insert into member values (#{id}, #{pw}, #{name}, #{tel})
 	</insert>
 	
-	<delete id="del"  parameterType="String">
+	<delete id="del"  parameterType="memberVO">
 		delete from member where id = #{id}
 	</delete>
 	
-	<update id="up"  parameterType="com.multi.mvc300.MemberVO">
+	<update id="up"  parameterType="memberVO">
 		update member set tel = #{tel} where id = #{id}
 	</update>
 	
 </mapper>
+
+
 
 
 
