@@ -5,12 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-body {
-}
-</style>
 </head>
 <body>
-회원삭제 처리 요청이 완료되었습니다.
+회원탈퇴가 요청됨
 </body>
 </html>
