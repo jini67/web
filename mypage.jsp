@@ -39,7 +39,7 @@ $(function() {
 	<hr color="orange">
 	<!-- 카카오 로그인 -->
 	<a class="p-2"
-		href="https://kauth.kakao.com/oauth/authorize?client_id=7d82a34e6c4c00f0c8af6bad0d046044&redirect_uri=http://localhost:8888/mini01/kakaoLogin&response_type=code">
+		href="https://kauth.kakao.com/oauth/authorize?client_id=개인키_uri=http://localhost:8888/mini01/kakaoLogin&response_type=code">
 		<!-- REST_API키 및 REDIRECT_URi는 본인걸로 수정하세요 --> <img
 		src="resources/img/카카오버튼.png" style="height: 40px">
 	</a>
