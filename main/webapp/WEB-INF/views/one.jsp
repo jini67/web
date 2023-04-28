@@ -3,23 +3,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-body {
-background: yellow;
-}
-</style>
+<%@ include file="../../header.jsp" %>
 </head>
 <body>
-<!--  표현식(expression -->
-회원검색 처리 요청이 완료되었습니다.<br>
-<!-- bag.getID() -->
-<!-- model의 속성으로 전달받은 bag은 EL로 출력한다. -->
-<!-- EL : 속성으로 지정한 값 꺼내서 출력해주세요! 라는 의미 -->
-${bag.id}<br> <!-- 출력용(expression language-EL) -->
-${bag.pw} <br>
-${bag.name} <br>
-${bag.tel} <br>
+<h2>메모장</h2>
+<form action="update.memo">
+    변경할 id : <input name="_id" value="${vo._id}" readonly="readonly"> <br>
+	이름 : <input name="name" size="30" value="${vo.name}" readonly="readonly"> <br>
+	메모 : <input name="content" size="30" value="${vo.content}" style="background: pink"><br>
+	날씨 : <input name="weather" size="30" value="${vo.weather}" readonly="readonly"> <br>
+	<button>메모 수정</button>
+</form>
+<hr color="red">
+<a href="delete.memo?_id=${vo._id}">
+	<button>메모 삭제</button>
+</a>
+<a href="mongo_memo.jsp">
+	<button>메모 목록</button>
+</a>
+
 </body>
 </html>
