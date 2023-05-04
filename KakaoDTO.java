@@ -1,36 +1,38 @@
-package com.multi.mini01;
+package com.multi.dorae.login;
 
 import lombok.Data;
 
 @Data
 public class KakaoDTO {
 
-	private long k_number;
-	private String k_name;
-	private String k_email;
+	private long m_number;
+	private String nickname;
+	private String email;
 	
-	public long getK_number() {
-		return k_number;
+	public long getM_number() {
+		return m_number;
 	}
-	public void setK_number(long k_number) {
-		this.k_number = k_number;
+	public void setM_number(long m_number) {
+		this.m_number = m_number;
 	}
-	public String getK_name() {
-		return k_name;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setK_name(String k_name) {
-		this.k_name = k_name;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
-	public String getK_email() {
-		return k_email;
+	public String getEmail() {
+		return email;
 	}
-	public void setK_email(String k_email) {
-		this.k_email = k_email;
+	public void setEmail(String email) {
+		this.email = email;
 	}
+	
 	@Override
 	public String toString() {
-		return "kakaoDTO [k_number=" + k_number + ", k_name=" + k_name + ", k_email=" + k_email + "]";}
+		return "KakaoDTO [m_number=" + m_number + ", nickname=" + nickname + ", email=" + email + "]";
+	}
 	
-	
+
 	}
 
